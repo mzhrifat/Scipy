@@ -1,7 +1,7 @@
 #Metric (SI) Prefixes:
 
 """
-from scipy import constants
+from scipy import constants c,G,h
 
 print(constants.yotta)    #1e+24
 print(constants.zetta)    #1e+21
@@ -128,3 +128,8 @@ print(constants.lbf)             #4.4482216152605
 print(constants.pound_force)     #4.4482216152605
 print(constants.kgf)             #9.80665
 print(constants.kilogram_force)  #9.80665
+
+
+print("Speed of Light:", c, "m/s")
+print("Gravitational Constant:", G, "m³/kg/s²")
+print("Planck's Constant:", h, "J·s")
