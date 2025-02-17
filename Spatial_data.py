@@ -26,5 +26,14 @@ simplices=Delaunay(points).simplices
 
 plt.triplot(points[:,0],points[:,1],simplices)
 plt.scatter(points[:,0],points[:,1],color='r')
+
+
+plt.title("Delaunay Triangulation Example")
+plt.xlabel("X Coordinate")
+plt.ylabel("Y Coordinate")
+plt.grid(True)
+
 plt.savefig("Triangulation.png",format='png')
 #plt.show()
+
+
