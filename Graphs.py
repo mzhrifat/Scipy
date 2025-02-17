@@ -1,3 +1,5 @@
+#csr_matrix,csr_graph,Adajacency matrix,Connected components,Dijkstra's Algorithm,Floyd-warshall Ak=lgorithm,Bellman_Ford-Algorithm,Depth-first-Search,Breadth-First-search
+
 """
 
 import numpy as np
@@ -47,7 +49,7 @@ arr=np.array([
 newarr=csr_matrix(arr)
 
 print(floyd_warshall(newarr,return_predecessors=True))
-"""
+
 
 #Bellman_ford
 
@@ -81,3 +83,20 @@ arr=np.array([
 
 newarr=csr_matrix(arr)
 print(depth_first_order(newarr,1))
+
+"""
+#breadth_first_order
+
+import numpy as np
+from scipy.sparse.csgraph import breadth_first_order
+from scipy.sparse import csr_matrix
+arr = np.array([
+  [0, 1, 0, 1],  # A → B, A → D
+  [1, 1, 1, 1],  # B → A, B → B, B → C, B → D
+  [2, 1, 1, 0],  # C → A, C → B, C → C
+  [0, 1, 0, 1]   # D → B, D → D
+])
+newarr=csr_matrix(arr)
+
+print(breadth_first_order(newarr,1))
+
