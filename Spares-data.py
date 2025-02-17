@@ -69,7 +69,7 @@ mat.sum_duplicates()  # ডুপ্লিকেট এন্ট্রিগু�
 
 print("After sum_duplicates():")
 print(mat)
-"""
+
 
 #Converting from csr to csc with the tocsc() method:
 
@@ -82,3 +82,27 @@ arr = np.array([[0, 0, 0], [0, 0, 1], [1, 0, 2]])
 newarr=csr_matrix(arr).tocsc()
 
 print(newarr)
+"""
+
+import numpy as np
+from scipy.sparse import csr_matrix
+
+dense_matrix=np.zeros((1000,1000))
+
+dense_matrix[5,10] =1
+dense_matrix[200,500] = 2
+dense_matrix[999,999] =3
+
+sparse_matrix = csr_matrix(dense_matrix)
+
+# Dense Matrix এর মেমরি সাইজ (bytes)
+dense_size = dense_matrix.nbytes
+
+# Sparse Matrix এর মেমরি সাইজ (bytes)
+sparse_size = sparse_matrix.data.nbytes + sparse_matrix.indices.nbytes + sparse_matrix.indptr.nbytes
+
+print(f"Dense Matrix Size: {dense_size / (1024**2):.2f} MB")
+print(f"Sparse Matrix Size: {sparse_size / (1024**2):.2f} MB")
+
+
+#print(sparse_matrix)
