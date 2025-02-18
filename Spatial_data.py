@@ -113,7 +113,7 @@ kdtree= KDTree(points)
 
 result=kdtree.query((1,1))
 print(result)
-"""
+
 
 #Distance Matrix
 from scipy.spatial.distance import euclidean
@@ -123,3 +123,35 @@ p2=(10,2)
 
 result=euclidean(p1,p2)
 print(result)
+
+#Cityblock
+from scipy.spatial.distance import cityblock
+
+v1=(1,2,3)
+v2=(4,5,6)
+
+result=cityblock(v1,v2)
+print(result)
+"""
+
+# Manhattan Distance
+from scipy.spatial.distance import cosine
+
+v1=(1,2,3)
+v2=(4,5,6)
+
+res=cosine(v1,v2)
+
+print(res)
+
+
+#Hamming distance
+
+from scipy.spatial.distance import hamming
+
+s1=[1,0,1,1]
+s2=[1,1,0,1]
+
+res=hamming(s1,s2)
+
+print(res)
