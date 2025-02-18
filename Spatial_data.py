@@ -102,7 +102,7 @@ for simplex in hull_points:
 
 plt.show()
 #plt.savefig("convex.png",format='png')
-"""
+
 #KDTrees
 
 from scipy.spatial import KDTree
@@ -113,4 +113,13 @@ kdtree= KDTree(points)
 
 result=kdtree.query((1,1))
 print(result)
+"""
 
+#Distance Matrix
+from scipy.spatial.distance import euclidean
+
+p1=(1,0)
+p2=(10,2)
+
+result=euclidean(p1,p2)
+print(result)
