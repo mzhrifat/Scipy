@@ -69,7 +69,7 @@ for simplex in simplices:
 # গ্রাফ দেখানো
 plt.show()
 
-"""
+
 
 
 #Convex Hull
@@ -98,7 +98,19 @@ hull_points=hull.simplices
 
 plt.scatter(points[:,0],points[:,1])
 for simplex in hull_points:
-    plt.plot(points[simplex,0],points[simplex,1],'k-',color='r')
+    plt.plot(points[simplex,0],points[simplex,1],'k-')
 
 plt.show()
 #plt.savefig("convex.png",format='png')
+"""
+#KDTrees
+
+from scipy.spatial import KDTree
+
+points=[(1,-1),(2,3),(-2,3),(2,-3)]
+
+kdtree= KDTree(points)
+
+result=kdtree.query((1,1))
+print(result)
+
