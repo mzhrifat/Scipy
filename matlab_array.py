@@ -34,7 +34,7 @@ print(list(file.keys()))
 dataset = file['my_matrix'][:]
 print(dataset)
 
-"""
+
 
 from scipy.io import loadmat
 
@@ -47,3 +47,16 @@ print(data.keys())
 # নির্দিষ্ট কোনো ম্যাট্রিক্স বা অ্যারে পাওয়া
 array1 = data['my_matrix']  # 'my_matrix' হলো MATLAB ভেরিয়েবল নাম
 print(array1)
+"""
+
+from scipy.io import savemat
+import numpy as np
+
+# সংরক্ষণের জন্য একটি ডিকশনারি তৈরি
+data_to_save = {
+    'matrix1': np.array([[1, 2, 3], [4, 5, 6]]),
+    'vector1': np.array([10, 20, 30])
+}
+
+# .mat ফাইলে সংরক্ষণ
+savemat('saved_data.mat', data_to_save)
