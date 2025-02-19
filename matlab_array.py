@@ -20,7 +20,7 @@ mydata=io.loadmat('arr.mat',squeeze_me=True)
 
 #print(mydata)
 print(mydata['vec'])
-"""
+
 
 import h5py
 
@@ -34,3 +34,16 @@ print(list(file.keys()))
 dataset = file['my_matrix'][:]
 print(dataset)
 
+"""
+
+from scipy.io import loadmat
+
+# MATLAB .mat ফাইল লোড করা
+data = loadmat('vec.mat')
+
+# ফাইলের ভেতরে কী কী ভেরিয়েবল আছে তা দেখা
+print(data.keys())
+
+# নির্দিষ্ট কোনো ম্যাট্রিক্স বা অ্যারে পাওয়া
+array1 = data['my_matrix']  # 'my_matrix' হলো MATLAB ভেরিয়েবল নাম
+print(array1)
