@@ -5,7 +5,7 @@ import numpy as np
 arr=np.arange(10)
 
 io.savemat('arr.mat',{"vec":arr})
-"""
+
 
 from scipy import io
 import numpy as np
@@ -20,3 +20,17 @@ mydata=io.loadmat('arr.mat',squeeze_me=True)
 
 #print(mydata)
 print(mydata['vec'])
+"""
+
+import h5py
+
+# HDF5 MATLAB ফাইল ওপেন করা
+file = h5py.File('example_v7_3.mat', 'r')
+
+# ফাইলের কী গুলো দেখা
+print(list(file.keys()))
+
+# কোনো নির্দিষ্ট dataset লোড করা
+dataset = file['my_matrix'][:]
+print(dataset)
+
