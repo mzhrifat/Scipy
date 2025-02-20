@@ -1,5 +1,5 @@
 #independent test
-
+"""
 import numpy as np
 from scipy import stats
 
@@ -31,4 +31,21 @@ print(f"F-Statistic: {f_stat}")
 print(f"P-Value: {p_value}")
 
 #p-value = 0.002, যা 0.05-এর কম, তাই গ্রুপগুলোর মধ্যে উল্লেখযোগ্য পার্থক্য আছে।
+"""
+
+ #3. Mann-Whitney U Test (Non-parametric Test)
+
+import numpy as np
+from scipy import stats
+
+# দুই গ্রুপের নম্বর
+group_A = [56, 60, 63, 67, 70]
+group_B = [50, 55, 58, 61, 65]
+
+u_stat,p_value=stats.mannwhitneyu(group_A,group_B)
+
+print(f"U-Statistics:{u_stat}")
+print(f"p-value:{p_value}")
+
+#p-value = 0.095, যা 0.05-এর বেশি, তাই গ্রুপগুলোর মধ্যে উল্লেখযোগ্য পার্থক্য নেই।
 
