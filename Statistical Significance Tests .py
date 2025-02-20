@@ -31,7 +31,7 @@ print(f"F-Statistic: {f_stat}")
 print(f"P-Value: {p_value}")
 
 #p-value = 0.002, যা 0.05-এর কম, তাই গ্রুপগুলোর মধ্যে উল্লেখযোগ্য পার্থক্য আছে।
-"""
+
 
  #3. Mann-Whitney U Test (Non-parametric Test)
 
@@ -48,4 +48,34 @@ print(f"U-Statistics:{u_stat}")
 print(f"p-value:{p_value}")
 
 #p-value = 0.095, যা 0.05-এর বেশি, তাই গ্রুপগুলোর মধ্যে উল্লেখযোগ্য পার্থক্য নেই।
+
+
+#4. Chi-Square Test (Categorical Data)
+import numpy as np
+import scipy.stats as stats
+
+# Observed data (ভেজ, নন-ভেজ, ভেগান)
+observed = [50, 30, 20]
+
+# Expected সমানভাবে জনপ্রিয় হলে (50 জন করে প্রতিটিতে)
+expected = [33.33, 33.33, 33.33]
+
+# Chi-square test
+chi_stat, p_value = stats.chisquare(observed, expected)
+
+print(f"Chi-Square Statistic: {chi_stat}")
+print(f"P-Value: {p_value}")
+"""
+
+#Show statistical description of the values in an array:
+
+import numpy as np
+from scipy.stats import describe
+
+v=np.random.normal(size=100)
+res=describe(v)
+
+print(res)
+
+
 
