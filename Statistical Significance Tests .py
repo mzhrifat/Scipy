@@ -65,7 +65,7 @@ chi_stat, p_value = stats.chisquare(observed, expected)
 
 print(f"Chi-Square Statistic: {chi_stat}")
 print(f"P-Value: {p_value}")
-"""
+
 
 #Show statistical description of the values in an array:
 
@@ -76,6 +76,13 @@ v=np.random.normal(size=100)
 res=describe(v)
 
 print(res)
+"""
+#Kurtosis:
 
+import numpy as np
+from scipy.stats import skew, kurtosis
 
+v=np.random.normal(size=100)
+print(skew(v))
+print(kurtosis(v))
 
