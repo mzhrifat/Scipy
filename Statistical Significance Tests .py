@@ -96,7 +96,9 @@ v=np.random.normal(size=100)
 print(normaltest(v))
 """
 
+"""
 #k-Test
+#from normal distribution
 
 import numpy as np
 from scipy.stats import kstest
@@ -106,3 +108,21 @@ v=np.random.normal(size=100)
 res=kstest(v,'norm')
 print(res)
 
+#for UNIFORM distribution
+
+import numpy as np
+from scipy.stats import kstest
+
+v=np.random.uniform(size=100)
+res=kstest(v,'uniform')
+print(res)
+"""
+#Example 3: Exponential Distribution চেক করা
+
+import numpy as np
+from scipy.stats import kstest
+
+v=np.random.normal(scale=1,size=100)
+
+res=kstest(v,'expon')
+print(res)
