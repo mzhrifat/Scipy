@@ -85,7 +85,7 @@ from scipy.stats import skew, kurtosis
 v=np.random.normal(size=100)
 print(skew(v))
 print(kurtosis(v))
-"""
+
 #normaltest
 
 import numpy as np
@@ -94,4 +94,15 @@ from scipy.stats import normaltest
 v=np.random.normal(size=100)
 
 print(normaltest(v))
+"""
+
+#k-Test
+
+import numpy as np
+from scipy.stats import kstest
+
+v=np.random.normal(size=100)
+
+res=kstest(v,'norm')
+print(res)
 
